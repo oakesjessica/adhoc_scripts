@@ -50,7 +50,7 @@ def main():
 	# using shorthand for the second loop within longhand os.walk() won't get all files recursively
 
 	with open("merge_files.sh", "w") as merge_file_fn:
-		for fp in files_to_merge[:1]:
+		for fp in files_to_merge:
 			file_path, _, back_file = fp.rpartition("/")
 			front_file = re.sub(r"(back)?\.([^.]*)$", r"front.\2", back_file)
 
